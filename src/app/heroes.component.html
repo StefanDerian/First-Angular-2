@@ -1,0 +1,11 @@
+
+<li *ngFor="let hero of heroes" (click) = "onSelect(hero)" >
+	<span class="badge">{{hero.id}}</span> {{hero.name}}
+</li>
+
+<div *ngIf = "selectedHero">
+	<h2> {{ selectedHero.name | lowercase}} is my hero</h2>
+	<button [routerLink]  = "['/detail',selectedHero.id]" > View Detail</button>
+
+</div>
+
